@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemantau Biaya Hidup Jawa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pemantau Biaya Hidup Pulau Jawa</h1>
+
+        <form id="biayaForm" onsubmit="return validateForm()">
+            <label for="kota">Kota:</label>
+            <input type="text" id="kota" name="kota">
+            <span id="kotaError" class="error"></span>
+
+            <label for="provinsi">Provinsi:</label>
+            <select id="provinsi" name="provinsi">
+                <option value="">Pilih Provinsi</option>
+                <option value="Jawa Barat">Jawa Barat</option>
+                <option value="Jawa Tengah">Jawa Tengah</option>
+                <option value="Jawa Timur">Jawa Timur</option>
+                <option value="DKI Jakarta">DKI Jakarta</option>
+                <option value="Banten">Banten</option>
+                <option value="DI Yogyakarta">DI Yogyakarta</option>
+            </select>
+            <span id="provinsiError" class="error"></span>
+
+            <label for="biayaMakanan">Biaya Makanan (per bulan):</label>
+            <input type="number" id="biayaMakanan" name="biayaMakanan">
+            <span id="biayaMakananError" class="error"></span>
+
+            <label for="biayaTransportasi">Biaya Transportasi (per bulan):</label>
+            <input type="number" id="biayaTransportasi" name="biayaTransportasi">
+            <span id="biayaTransportasiError" class="error"></span>
+
+            <label for="biayaPendidikan">Biaya Pendidikan (per bulan):</label>
+            <input type="number" id="biayaPendidikan" name="biayaPendidikan">
+            <span id="biayaPendidikanError" class="error"></span>
+
+            <label for="biayaLain">Biaya Lain-lain (per bulan):</label>
+            <input type="number" id="biayaLain" name="biayaLain">
+
+            <button type="submit">Simpan</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+
+        <h2>Data Biaya Hidup</h2>
+        <table id="biayaTable">
+            <thead>
+                <tr>
+                    <th>Kota</th>
+                    <th>Provinsi</th>
+                    <th>Makanan</th>
+                    <th>Transportasi</th>
+                    <th>Pendidikan</th>
+                    <th>Lain-lain</th>
+                    <th>Total</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data akan ditampilkan di sini -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
